@@ -1,0 +1,76 @@
+@use "./abstracts/_functions" as *;
+@use "./abstracts/_mixins" as *;
+@use "./abstracts/_variables" as *;
+@use "./abstracts/placeholders" as *;
+@use "./base/_global-rules" as *;
+
+
+.container {
+    height: 5000px;
+    @include linear-gradient(135deg, #cf9aff, #94c0ff);
+    color: #fff;
+    padding: 4% 0 0 10%;
+    overflow: hidden;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.container h1 img {
+    width: 60px;
+}
+.container button img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.container button{
+    display: flex;
+    align-items: center;
+    @include linear-gradient(#9418fd,#8663de);
+    color: white;
+    @extend %reset-edges;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.input-box {
+    position: relative;
+    width: calc(90% / 2);
+
+    min-height: 150px;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    @extend %reset-edges;
+    
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    max-width: 100%;
+    @include breakpoints(small){
+        max-height: calc(100vh - 400px);
+    }
+    max-height: 100%;
+}
+
+.input-box img {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}

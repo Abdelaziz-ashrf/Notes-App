@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./sass/master.css")
+        title Weather app
+    body 
+        .container 
+            h1  
+                img(src="images/notes.png", alt="")
+                |Notes
+            button.btn
+                img(src="images/edit.png", alt="")
+                | Create Notes
+            .notes-container 
+                //- p(contenteditable='true', class='input-box')
+                    //- img(src="images/delete.png") 
+        include includes/_scripts/_scripts            
